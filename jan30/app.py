@@ -28,7 +28,7 @@ def f(player):
     cursor.execute(query, [player])
     records = cursor.fetchall()
     conn.close()
-    return records 
+    return records[0][0]
 
 print(f('schmimi01'))
 # iface = gr.Interface(fn = f, inputs = gr.Dropdown(choices=fetch_phillies()), outputs = "number")
